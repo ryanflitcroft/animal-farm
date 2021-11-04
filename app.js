@@ -21,7 +21,7 @@ const horseImage = document.getElementById('horse-image');
 const dogImage = document.getElementById('dog-image');
 
 // VALIDATE that const assignments exist
-console.log(catImage, horseImage, dogImage);
+// console.log(catImage, horseImage, dogImage);
 // --TRUE
 
 // ACCESS AUDIO ELEMENTS IN DOM, assign to const
@@ -30,5 +30,19 @@ const horseAudio = document.getElementById('horse-audio');
 const dogAudio = document.getElementById('dog-audio');
 
 // VALIDATE that const assignments exist
-console.log(catAudio, horseAudio, dogAudio);
+// console.log(catAudio, horseAudio, dogAudio);
 // --TRUE
+
+catImage.addEventListener('click', () => {
+  catAudio.play();
+});
+
+horseImage.addEventListener('click', () => {
+  horseAudio.play();
+});
+
+dogImage.addEventListener('click', () => {
+  dogAudio.play();
+})
+
+
