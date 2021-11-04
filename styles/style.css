@@ -41,6 +41,11 @@ header {
     box-shadow: var(--shadow);
 }
 
+h1 {
+    font-family: 'hydrophilia-iced', sans-serif;
+    letter-spacing: 1rem;
+}
+
 footer {
     display: flex;
     justify-content: flex-end;

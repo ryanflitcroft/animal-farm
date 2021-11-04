@@ -33,16 +33,73 @@ const dogAudio = document.getElementById('dog-audio');
 // console.log(catAudio, horseAudio, dogAudio);
 // --TRUE
 
+const animalSpan = document.getElementById('animal-span');
+const audioSpan = document.getElementById('audio-span');
+
+// VALIDATE that const assignments exist
+// console.log(animalSpan, audioSpan);
+// --TRUE
+
+// CREATE FUNCTION FOR DRY CODE, PULL ACTIONS FROM EVENT LISTENERS, replace with new function
+function catFun() {
+    catAudio.play();
+    animalSpan.textContent = 'cat';
+    audioSpan.textContent = 'meow';
+}
+
+function horseFun() {
+    horseAudio.play();
+    animalSpan.textContent = 'horse';
+    audioSpan.textContent = 'neyy';
+}
+
+function dogFun() {
+    dogAudio.play();
+    animalSpan.textContent = 'dog';
+    audioSpan.textContent = 'bark';
+}
+
+// VALIDATE NEW FUNCTIONS
+// console.log(catFun, horseFun, dogFun);
+// --TRUE
+
 catImage.addEventListener('click', () => {
-  catAudio.play();
+  // catAudio.play();
+  // animalSpan.textContent = 'cat';
+  // audioSpan.textContent = 'meow';
+  // ^This will become catFun about
+    catFun();
 });
 
 horseImage.addEventListener('click', () => {
-  horseAudio.play();
+    // horseAudio.play();
+    // animalSpan.textContent = 'horse';
+    // audioSpan.textContent = 'neyy';
+    horseFun();
 });
 
 dogImage.addEventListener('click', () => {
-  dogAudio.play();
-})
+    // dogAudio.play();
+    // animalSpan.textContent = 'dog';
+    // audioSpan.textContent = 'bark';
+    dogFun();
+});
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'c') {
+        catFun();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'h') {
+        horseFun();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'd') {
+        dogFun();
+    }
+});
 
