@@ -56,7 +56,7 @@ function horseFun() {
 function dogFun() {
     dogAudio.play();
     animalSpan.textContent = 'dog';
-    audioSpan.textContent = 'bark';
+    audioSpan.textContent = 'woof';
 }
 
 // VALIDATE NEW FUNCTIONS
